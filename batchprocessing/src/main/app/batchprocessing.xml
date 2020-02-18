@@ -24,7 +24,7 @@ http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/ba
             </batch:step>
         </batch:process-records>
         <batch:on-complete>
-            <logger message="Records processed--------------------------------#[payload.processedRecords]" level="INFO" doc:name="Logger"/>
+            <logger message="Records Stage processed--------------------------------#[payload.processedRecords]" level="INFO" doc:name="Logger"/>
         </batch:on-complete>
     </batch:job>
 </mule>
