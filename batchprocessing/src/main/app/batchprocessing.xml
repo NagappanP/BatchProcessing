@@ -11,7 +11,7 @@ http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/ba
     <batch:job name="batchprocessingBatch">
         <batch:input>
             <poll doc:name="Poll">
-                <fixed-frequency-scheduler frequency="30000"/>
+                <fixed-frequency-scheduler frequency="50000"/>
                 <watermark variable="accid" default-expression="0" selector="MAX" selector-expression="#[payload.id]"/>
                 <db:select config-ref="MySQL_Configuration" doc:name="Database">
                     <db:parameterized-query><![CDATA[select * from test where id > #[flowVars.accid]]]></db:parameterized-query>
