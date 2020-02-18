@@ -20,7 +20,7 @@ http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/ba
         </batch:input>
         <batch:process-records>
             <batch:step name="Batch_Step">
-                <logger message="Record Order : -------------------------- #[payload]" level="INFO" doc:name="Logger"/>
+                <logger message="Record Order  processing: -------------------------- #[payload]" level="INFO" doc:name="Logger"/>
             </batch:step>
         </batch:process-records>
         <batch:on-complete>
